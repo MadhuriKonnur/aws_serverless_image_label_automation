@@ -33,13 +33,12 @@ After deployment is successful, you can check the setup details using `sls info`
 
 Example,
 
-    curl -X POST \
-      https://xxxxxxxxxxxx.amazonaws.com/dev/getImagesByLabel \
-      -H 'Content-Type: application/json' \
-      -H 'Postman-Token: f769a23f-d285-4aba-9fc1-f3d8dd4b9f33' \
-      -H 'cache-control: no-cache' \
-      -d '{"label":"Furniture"}'
-      
+curl -X POST \
+> https://fc0ach5qfb.execute-api.ap-south-1.amazonaws.com/dev/getImagesByLabel \
+> -H 'Content-Type: application/json' \
+>   -H 'Postman-Token: f769a23f-d285-4aba-9fc1-f3d8dd4b9f33' \
+>   -H 'cache-control: no-cache' \
+>   -d '{"label":"dog"}'
 
-
-
+Output as below
+{"Images": [{"fileName": "doggy1.jpg", "imageID": "2146cb2f-bf24-11ec-ab0c-39ce5ef52a91", "labels": ["hound", "dog", "beagle"]}]}
